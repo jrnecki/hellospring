@@ -1,7 +1,17 @@
 package hello.hellospring.domain;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Entity
 public class Member {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // db가 자동으로 넣어준다는 뜻
     private Long id;
+
     private String name;
 
     public Long getId() {
